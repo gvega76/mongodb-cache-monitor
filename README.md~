@@ -91,13 +91,6 @@ node data-bridge.js [options]
   --help                 Show help
 ```
 
-## Sample Images
-
-![Summary](images/image1.png)
-![Dashboard](images/image2.png)
-![Collections](images/image3.png)
-
-
 ## API Endpoints
 
 | Endpoint | Description |
@@ -107,9 +100,6 @@ node data-bridge.js [options]
 | `GET /api/history` | Historical data points (up to 100) |
 | `GET /api/config` | Current configuration |
 | `GET /api/system` | System info (MongoDB version, host, connections, cache) |
-
-
-
 
 ## License
 
