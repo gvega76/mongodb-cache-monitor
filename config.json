@@ -1,0 +1,43 @@
+{
+  "monitoring": {
+    "reportTime": 60,
+    "outputFormat": "json",
+    "showIndexes": true,
+    "colorOutput": true,
+    "minSizeThreshold": 0
+  },
+  "display": {
+    "maxCollectionNameLength": 50,
+    "sortBy": "cachePercent",
+    "showSummary": true,
+    "refreshWebDashboard": true
+  },
+  "export": {
+    "enableCSV": true,
+    "enableJSON": true,
+    "outputDirectory": "./exports",
+    "filenamePrefix": "mongodb-cache-stats",
+    "timestampFormat": "YYYY-MM-DD-HH-mm-ss"
+  },
+  "filtering": {
+    "excludeSystemCollections": true,
+    "excludeViews": true,
+    "includeDatabases": [],
+    "excludeDatabases": ["local", "config", "admin"],
+    "minCachePercent": 0,
+    "maxResults": 100
+  },
+  "alerts": {
+    "enabled": false,
+    "lowCacheThreshold": 20,
+    "highReadRateThreshold": 100,
+    "highWriteRateThreshold": 50
+  },
+  "dashboard": {
+    "port": 8080,
+    "autoRefresh": true,
+    "defaultRefreshRate": 30000,
+    "maxDataPoints": 50,
+    "enableExport": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "mongodb-cache-monitor",
+  "version": "1.0.0",
+  "description": "MongoDB cache monitoring and visualization tools",
+  "main": "data-bridge.js",
+  "scripts": {
+    "start": "node data-bridge.js",
+    "dev": "node data-bridge.js --port 3000",
+    "export": "node data-bridge.js --export-csv",
+    "help": "node data-bridge.js --help"
+  },
+  "keywords": [
+    "mongodb",
+    "cache",
+    "monitoring",
+    "visualization",
+    "performance",
+    "dashboard"
+  ],
+  "author": "MongoDB Cache Monitor",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {},
+  "bugs": {},
+  "homepage": ""
+}
