@@ -17,6 +17,7 @@ This tool is designed for **replica set** and **standalone** MongoDB deployments
 | `data-bridge.js` | Node.js HTTP server that serves the dashboard and provides REST APIs |
 | `dashboard.html` | Single-page web dashboard (charts, tables, history playback) |
 | `config.json` | Configuration for monitoring, display, filtering, and dashboard |
+| `mongotop-view/README.md` | Documentation for the mongotop view and usage details |
 | `exports/` | Directory for CSV exports |
 
 ## Requirements
@@ -116,7 +117,9 @@ node data-bridge.js [options]
 | `GET /api/system` | System info (MongoDB version, host, connections, cache) |
 
 
+## Mongotop
 
+See [mongotop-view README](mongotop-view/README.md)
 
 ## License
 
