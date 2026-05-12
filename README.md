@@ -2,6 +2,13 @@
 
 Real-time MongoDB WiredTiger cache monitoring with a web dashboard. Zero external dependencies -- uses only Node.js built-in modules and Chart.js via CDN.
 
+## Important: Replica Set / Standalone Only
+
+This tool is designed for **replica set** and **standalone** MongoDB deployments. It uses the `db.collection.stats()` command to collect WiredTiger cache metrics, which behaves differently on sharded clusters
+
+- **Dashboard charts** reflect totals from the connected node, not per-shard breakdowns.
+
+
 ## Files
 
 | File | Description |

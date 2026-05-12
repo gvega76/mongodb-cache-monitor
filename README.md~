@@ -2,6 +2,16 @@
 
 Real-time MongoDB WiredTiger cache monitoring with a web dashboard. Zero external dependencies -- uses only Node.js built-in modules and Chart.js via CDN.
 
+## Important: Replica Set / Standalone Only
+
+This tool is designed for **replica set** and **standalone** MongoDB deployments. It uses the `db.collection.stats()` command to collect WiredTiger cache metrics, which behaves differently on sharded clusters:
+
+- **On a replica set or standalone:** `collStats` returns a single document with WiredTiger cache details. The tool works as expected.
+- **On a sharded cluster via `mongos`:** `collStats` returns aggregated results across shards but **does not include WiredTiger cache fields** (since `mongos` is a router, not a storage node). The script will silently skip all collections because the `wiredTiger.cache` sub-document will be absent.
+- **Dashboard charts** reflect totals from the connected node, not per-shard breakdowns.
+
+If you need cache monitoring on a sharded cluster, connect directly to individual shard replica set members instead of going through `mongos`.
+
 ## Files
 
 | File | Description |
@@ -91,6 +101,13 @@ node data-bridge.js [options]
   --help                 Show help
 ```
 
+## Sample Images
+
+![Summary](images/image1.png)
+![Dashboard](images/image2.png)
+![Collections](images/image3.png)
+
+
 ## API Endpoints
 
 | Endpoint | Description |
@@ -100,6 +117,9 @@ node data-bridge.js [options]
 | `GET /api/history` | Historical data points (up to 100) |
 | `GET /api/config` | Current configuration |
 | `GET /api/system` | System info (MongoDB version, host, connections, cache) |
+
+
+
 
 ## License
 
