@@ -1,1 +1,12 @@
 .DS_Store
+
+# Generated data exports
+cache_output.json
+cacheview_json_output.json
+mongotop_output.json
+mongodb-cache-export-*.csv
+exports/*.csv
+
+# Editor and temporary files
+*.un~
+*~
