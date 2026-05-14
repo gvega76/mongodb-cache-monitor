@@ -121,6 +121,14 @@ node data-bridge.js [options]
 
 See [mongotop-view README](mongotop-view/README.md)
 
+## Third-Party Notices
+
+This project uses Chart.js via CDN in [dashboard.html](dashboard.html) and [mongotop-view/mongotop-view.js](mongotop-view/mongotop-view.js).
+
+- Chart.js: https://www.chartjs.org/
+- License: MIT License
+- Copyright: Chart.js Contributors
+
 ## License
 
 MIT

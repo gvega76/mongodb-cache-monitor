@@ -23,7 +23,7 @@ A simple dashboard for visualizing MongoDB `mongotop` JSON output.
 
 3. Open your browser and go to:
 
-   [http://localhost:8100](http://localhost:8100)
+   [http://localhost:8090](http://localhost:8090)
 
 ## Options
 - `--json-file <path>`: Path to mongotop JSON file (required)
