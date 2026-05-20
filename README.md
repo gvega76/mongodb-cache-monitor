@@ -28,7 +28,7 @@ This tool is designed for **replica set** and **standalone** MongoDB deployments
 
 ## Usage
 
-### Option 1: Live monitoring (data-bridge spawns mongosh)
+### Option 1: Live monitoring (data-bridge spawns mongosh defaults to 10 minutes)
 
 ```bash
 node data-bridge.js --mongo "mongodb+srv://user:pass@cluster.mongodb.net/admin"
@@ -37,7 +37,7 @@ node data-bridge.js --mongo "mongodb+srv://user:pass@cluster.mongodb.net/admin"
 ### Option 2: Pipe mongosh output into data-bridge
 
 ```bash
-mongosh --quiet "mongodb+srv://user:pass@cluster.mongodb.net/admin" cacheview_json.js \
+mongosh --quiet "mongodb+srv://user:pass@cluster.mongodb.net/admin"   --eval "var config = {reportTime: 60};" cacheview_json.js \
   | node data-bridge.js
 ```
 
